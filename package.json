@@ -1,0 +1,8 @@
+{
+"name": "two-way-data-binding",
+"version": "1.0.0",
+	"dependencies": {
+	"express": "~4.9.2",
+	"mysql": "~2.5.0"
+	}
+}
