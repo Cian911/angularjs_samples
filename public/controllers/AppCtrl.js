@@ -5,6 +5,7 @@ var myApp = angular.module('myApp', []).controller('AppCtrl', ['$scope', '$http'
 	});
 
 	$scope.addUser = function () {
+		console.log($scope.contact);
 		$http.post('/contactList', $scope.contact);
 	}
 
