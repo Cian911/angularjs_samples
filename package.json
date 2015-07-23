@@ -1,8 +1,9 @@
 {
-"name": "two-way-data-binding",
-"version": "1.0.0",
-	"dependencies": {
-	"express": "~4.9.2",
-	"mysql": "~2.5.0"
-	}
+  "name": "two-way-data-binding",
+  "version": "1.0.0",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "express": "~4.9.2",
+    "mysql": "~2.5.0"
+  }
 }

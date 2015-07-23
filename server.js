@@ -1,5 +1,6 @@
 var express = require('express');
 var app 	= express();
+var parser	= require('body-parser');
 var mysql	= require('mysql');
 
 var connection = mysql.createConnection ({
@@ -11,6 +12,8 @@ var connection = mysql.createConnection ({
 
 // Look for static files
 app.use(express.static (__dirname + '/public'));
+// Use body parser for POST requests
+app.use(parser.urlencoded({ extended: false }));
 
 app.get('/contactList', function (request, response) {
 	connection.query("SELECT * FROM users", function (errors, rows) {
@@ -19,6 +22,10 @@ app.get('/contactList', function (request, response) {
 		else
 			response.end(JSON.stringify(rows));
 	});
+});
+
+app.post('/contactList', function (request, response) {
+	console.log(request.body);
 });
 
 app.listen(3000);
